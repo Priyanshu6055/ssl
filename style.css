@@ -81,7 +81,7 @@ a {
 }
 
 .btn-primary {
-  background: var(--blue-grad);
+  background: var(--primary);
   color: white;
   box-shadow: 0 4px 15px rgba(0, 136, 204, 0.2);
 }
@@ -134,6 +134,17 @@ a {
   max-width: 900px;
   /* text-align: center; */
 }
+
+.section-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(248, 250, 252, 0.9));
+  z-index: 1;
+}
+
 
 .brand-logo-box {
   display: inline-block;
@@ -252,8 +263,16 @@ a {
 
 /* GLANCE SECTION */
 .glance {
-  background: #f8fafc;
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1604076913837-52ca5629fba9?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;
+  overflow: hidden;
 }
+
+.glance .container {
+  position: relative;
+  z-index: 2;
+}
+
 
 .glance-grid {
   display: grid;
@@ -383,8 +402,22 @@ a {
   font-size: 1.15rem;
 }
 
+.step-date {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  display: block;
+}
+
 .timeline-step:nth-child(even) .step-title {
   color: var(--secondary);
+}
+
+.timeline-step:nth-child(even) .step-date {
+  color: var(--primary);
 }
 
 .step-content p {
@@ -395,8 +428,16 @@ a {
 
 /* PROGRAM STRUCTURE */
 .program-structure {
-  background: #f8fafc;
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1557683304-673a23048d34?q=80&w=2030&auto=format&fit=crop') center/cover no-repeat;
+  overflow: hidden;
 }
+
+.program-structure .container {
+  position: relative;
+  z-index: 2;
+}
+
 
 .weeks-grid {
   display: grid;
@@ -545,8 +586,16 @@ a {
 
 /* REWARDS */
 .ssl-rewards {
-  background: #f8fafc;
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+  overflow: hidden;
 }
+
+.ssl-rewards .container {
+  position: relative;
+  z-index: 2;
+}
+
 
 .rewards-header {
   margin-bottom: 60px;
