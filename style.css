@@ -1,7 +1,7 @@
 /* VARIABLES */
 :root {
-  --primary: #0088cc;
-  --secondary: #ee9e26;
+  --primary: #006395;
+  --secondary: #df9220;
   --dark: #020a13;
   --deep-dark: #f8fafc;
   --white: #ffffff;
@@ -132,7 +132,7 @@ a {
   position: relative;
   z-index: 2;
   max-width: 900px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .brand-logo-box {
@@ -182,11 +182,12 @@ a {
   color: var(--grey);
   max-width: 750px;
   margin: 0 auto 40px;
+  margin-left: 0;
 }
 
 .hero-btns {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 20px;
 }
 
