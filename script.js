@@ -48,4 +48,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Scroll-based Timeline Progress Line
+    const timeline = document.querySelector('.journey-timeline');
+    const track = document.querySelector('.timeline-track');
+    if (timeline && track) {
+        const progressLine = document.createElement('div');
+        progressLine.style.position = 'absolute';
+        progressLine.style.top = '0';
+        progressLine.style.left = '0';
+        progressLine.style.width = '100%';
+        progressLine.style.background = 'var(--gradient-main)';
+        progressLine.style.height = '0%';
+        progressLine.style.borderRadius = '5px';
+        progressLine.style.boxShadow = 'var(--shadow-glow)';
+        progressLine.style.transition = 'height 0.2s ease-out';
+        progressLine.style.zIndex = '1';
+        track.appendChild(progressLine);
+
+        window.addEventListener('scroll', () => {
+            const rect = timeline.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            // Calculate how far the user has scrolled past the top of the timeline
+            if (rect.top < windowHeight * 0.8 && rect.bottom > 0) {
+                let scrollPercentage = (windowHeight * 0.8 - rect.top) / (rect.height);
+                scrollPercentage = Math.max(0, Math.min(1, scrollPercentage));
+                progressLine.style.height = (scrollPercentage * 100) + '%';
+            }
+        });
+    }
 });
